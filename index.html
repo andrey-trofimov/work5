@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Work 5 | test</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link href="./css/style.css" rel="stylesheet" />
+  </head>
+
+  <body class="container-xxl">
+    <div class="row body">
+      <!-- Mobile menu -->
+      <!-- Offcanvas Sidebar -->
+      <div class="offcanvas offcanvas-start d-block d-lg-none" id="mobileMenu">
+        <div class="offcanvas-header">
+          <h1 class="offcanvas-title"></h1>
+          <button
+            type="button"
+            class="btn-close text-reset"
+            data-bs-dismiss="offcanvas"
+          ></button>
+        </div>
+        <nav>
+          <ul class="nav flex-column">
+            <li class="nav-item">
+              <a href="#" class="nav-link nav-link__main">Главная</a>
+            </li>
+
+            <li class="nav-item nav-item_active">
+              <a
+                href="#"
+                class="nav-link nav-link_active nav-link__shops_active"
+                >Мои магазины</a
+              >
+            </li>
+
+            <li class="nav-item">
+              <a href="#" class="nav-link nav-link__promo">Промоматериалы</a>
+            </li>
+
+            <li class="nav-item">
+              <a href="#" class="nav-link nav-link__statistics">Статистика</a>
+            </li>
+
+            <li class="nav-item">
+              <a href="#" class="nav-link nav-link__balance">Баланс</a>
+            </li>
+
+            <li class="nav-item">
+              <a href="#" class="nav-link nav-link__profile"
+                >Персональные данные</a
+              >
+            </li>
+
+            <li class="nav-item">
+              <a href="#" class="nav-link nav-link__faq">FAQ</a>
+            </li>
+
+            <li class="nav-item">
+              <a href="#" class="nav-link nav-link__support">Техподдержка</a>
+            </li>
+
+            <li class="nav-item">
+              <a href="#" class="nav-link nav-link__exit">Выход</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+
+      <!-- Button to open the offcanvas sidebar -->
+      <div class="header_mobile d-block d-lg-none container">
+        <button
+          class="btn-hamburger"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#mobileMenu"
+        >
+          <img src="/img/Hamburger_icon.svg" width="20px" height="30px" />
+        </button>
+      </div>
+
+      <!-- Descktop menu -->
+      <aside class="col-md-2 aside d-none d-lg-block">
+        <nav>
+          <ul class="nav flex-column">
+            <li class="nav-item">
+              <a href="#" class="nav-link nav-link__main">Главная</a>
+            </li>
+
+            <li class="nav-item nav-item_active">
+              <a
+                href="#"
+                class="nav-link nav-link_active nav-link__shops_active"
+                >Мои магазины</a
+              >
+            </li>
+
+            <li class="nav-item">
+              <a href="#" class="nav-link nav-link__promo">Промоматериалы</a>
+            </li>
+
+            <li class="nav-item">
+              <a href="#" class="nav-link nav-link__statistics">Статистика</a>
+            </li>
+
+            <li class="nav-item">
+              <a href="#" class="nav-link nav-link__balance">Баланс</a>
+            </li>
+
+            <li class="nav-item">
+              <a href="#" class="nav-link nav-link__profile"
+                >Персональные данные</a
+              >
+            </li>
+
+            <li class="nav-item">
+              <a href="#" class="nav-link nav-link__faq">FAQ</a>
+            </li>
+
+            <li class="nav-item">
+              <a href="#" class="nav-link nav-link__support">Техподдержка</a>
+            </li>
+
+            <li class="nav-item">
+              <a href="#" class="nav-link nav-link__exit">Выход</a>
+            </li>
+          </ul>
+        </nav>
+      </aside>
+
+      <main class="col-md main">
+        <!-- Header -->
+
+        <div
+          class="container-xxl d-flex justify-content-between flex-wrap header"
+        >
+          <div class="crumbs">
+            <a href="#" class="crumbs__item">Главная</a>
+            <a href="#" class="crumbs__item">Мои магазины</a>
+          </div>
+
+          <div class="d-flex">
+            <button
+              class="d-flex justify-content-center align-items-center border rounded-2 envelope envelope_new-letter"
+            >
+              <img
+                class="img"
+                src="./img/envelope.svg"
+                alt="envelope"
+                width="23"
+                height="18"
+              />
+            </button>
+
+            <div
+              class="d-flex justify-content-left align-items-center align-self-stretch border-0 border rounded-2 user"
+            >
+              <img
+                src="./img/user.png"
+                alt="user photo"
+                class="rounded-circle user__pic"
+              />
+              <p class="user__name">Максим Добжанский</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div>
+            <!-- Button to Open the Modal -->
+            <button
+              class="btn btn-create"
+              data-bs-toggle="modal"
+              data-bs-target="#newShop"
+            >
+              Создать свой магазин
+            </button>
+
+            <h1 class="h1">Управление магазинами</h1>
+
+            <div class="col-md-11 content rounded-3 p-4">
+              <div class="table-responsive-md">
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th>№</th>
+                      <th>Название</th>
+                      <th>Адрес</th>
+                      <th>Действие</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>12345</td>
+                      <td>Дипломная работа</td>
+                      <td>http://www.work5.ru/services</td>
+                      <td>
+                        <button class="btn btn-edit">Редактировать</button>
+                        <button class="btn btn-delete">Редактировать</button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>12345</td>
+                      <td>Дипломная работа</td>
+                      <td>http://www.work5.ru/services</td>
+                      <td>
+                        <button class="btn btn-edit">Редактировать</button>
+                        <button class="btn btn-delete">Редактировать</button>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+          <!-- <div class="col-md-1"></div> -->
+        </div>
+
+        <!-- The Modal -->
+        <div class="modal col-3" id="newShop">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <!-- Modal Header -->
+              <div class="modal-header">
+                <h4 class="modal-title">Создать магазин</h4>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                ></button>
+              </div>
+
+              <!-- Modal body -->
+              <div class="modal-body">
+                <!-- select -->
+                <div class="d-flex justify-content-between flex-wrap">
+                  <div>
+                    <label class="label">Шаблон</label>
+                    <select class="form-select rounded-1">
+                      <option>Стандартный</option>
+                    </select>
+                  </div>
+
+                  <div>
+                    <label class="label">Шаблон</label>
+                    <select class="form-select rounded-1">
+                      <option>Стандартный</option>
+                    </select>
+                  </div>
+                </div>
+                <!-- input -->
+                <label class="label mt-4">Домен</label>
+                <div class="input-group">
+                  <input
+                    type="text"
+                    class="form-control border-0 input_modal"
+                    placeholder="Например: ivangrozniy"
+                  />
+                  <span class="input-group-text">.work5.ru</span>
+                </div>
+                <!-- note -->
+                <p class="modal__note mt-4">
+                  В названии домена разрешены латиница и “-”, запрещается
+                  использовать словосочетание Work 5. После создания магазина Вы
+                  сможете прикрутить свой домен (например ivangrozniy.ru).
+                  Подробнее по <a href="#">ссылке</a>
+                </p>
+              </div>
+
+              <!-- Modal footer -->
+              <div class="modal-footer mt-3">
+                <button
+                  type="button"
+                  class="btn btn-cancel rounded-1"
+                  data-bs-dismiss="modal"
+                >
+                  Отмена
+                </button>
+                <button
+                  type="button"
+                  class="btn btn-ok rounded-1"
+                  data-bs-dismiss="modal"
+                >
+                  Саздать
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>
