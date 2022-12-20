@@ -10,6 +10,13 @@ html {
 .body {
     min-height: 100vh;
     background-color: #f8faff;
+    flex-wrap: nowrap;
+}
+
+@media screen and (max-width: 768px) {
+    .body {
+        flex-wrap: wrap;
+    }
 }
 
 .aside {
@@ -174,6 +181,14 @@ html {
     padding-top: 22px;
     padding-left: 60px;
     padding-bottom: 40px;
+    max-width: calc(100vw - 260px);
+}
+
+@media screen and (max-width: 768px) {
+    .main {
+        padding-left: calc(var(--bs-gutter-x) * 0.5);
+        max-width: none;
+    }
 }
 
 .header {
@@ -183,6 +198,7 @@ html {
 .crumbs {
     font-size: 0.75rem;
     margin-left: -12px;
+    margin-bottom: 20px;
 }
 
 .crumbs__item:hover {
@@ -234,8 +250,7 @@ html {
 .user {
     background-color: #fff;
     box-shadow: 0px 0px 16px rgba(136, 167, 245, 0.17);
-    /* min-width: fit-content; */
-    padding: 0 18px;
+    padding: 5px 18px;
 }
 
 .user__pic {
@@ -326,7 +341,7 @@ html {
     margin-top: 30px;
     font-size: 00.875rem;
     color: #343434;
-    min-width: fit-content;
+    /* min-width: fit-content; */
 }
 
 /* Modal style */
@@ -395,5 +410,5 @@ tr:last-child > td {
 }
 
 .table > :not(caption) > * > * {
-    padding: 1rem 0;
+    padding: 1rem 0.375rem;
 }
